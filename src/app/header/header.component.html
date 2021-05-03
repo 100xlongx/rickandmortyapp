@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-inverse">
+    <a class="navbar-brand">Rick and Morty Fansite</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="episodeLink" routerLink="/episodes">Episodes</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="favoriteLink" routerLink="/favorites">Favorites</a>
+        </li>
+      </ul>
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" id='searchbar' aria-label="Search" [(ngModel)]="input">
+        <button id="searchsubmit" class="btn btn-outline-success my-2 my-sm-0" type="submit" (submit)="handleSearch()">Search</button> -->
+      <form id="searchform" class="form-inline my-2 my-lg-0" #f="ngForm" (ngSubmit)="handleSearch()">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" id='searchbar' aria-label="Search" [(ngModel)]="input" name='input'>
+        <button id="searchsubmit" class="btn btn-outline-success " type="submit">Search</button>
+      </form>
+
+    </div>
+  </nav>

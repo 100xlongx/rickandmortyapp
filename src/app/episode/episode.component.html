@@ -1,0 +1,25 @@
+<div>
+    <div *ngIf="episode; else loading">
+        <div class="episode-header">
+            <h2 id='title'>{{episode.name}}</h2>
+            <h3>Air Date: {{episode.air_date}}</h3>
+            <h3>Episode: {{episode.episode}}</h3>
+        </div>
+
+        <div class="character-container">
+            <div class="character-card" *ngFor="let character of characters">
+                {{character.name}} - Status: {{character.status}}
+                <img class="character-image" src={{character.image}}>
+            </div>
+        </div>
+
+        <!-- <ng-template #loadingC>
+            Loading characters...
+        </ng-template> -->
+    </div>
+
+    <ng-template #loading>
+        Loading....
+    </ng-template>
+    
+</div>

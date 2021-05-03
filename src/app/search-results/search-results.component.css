@@ -1,0 +1,33 @@
+.search-results-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 40px;
+    gap: 32px;
+}
+
+.episode-listing {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: thick double black;
+
+}
+
+button {
+    margin-top: 8px;
+}
+
+h1, h3, h6 {
+    text-align: center;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  
+
+}

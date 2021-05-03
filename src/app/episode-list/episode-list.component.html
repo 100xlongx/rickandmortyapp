@@ -1,0 +1,39 @@
+<br>
+<div class="dark fire">
+    <h1 class="Blazing">Season One</h1>
+</div> 
+
+<div class="episodes-container">
+    <div class="episode-listing" *ngFor="let episode of season1">
+        <h6> E:{{episode.episode.slice(4,6)}} </h6><h4>{{episode.name}}</h4> 
+        <img src="https://via.placeholder.com/200" class="center">
+        <button class='episode-button' routerLink="/episodes/{{episode.id}}">Visit Episode</button>           
+        <button id="favorites" (click)="renderFavorites(episode.id)" onClick="this.disabled=true">Favorite! </button>
+    </div>
+</div>
+
+<div class="dark fire">
+    <h1 class="Blazing">Season Two</h1>
+</div> 
+
+<div class="episodes-container">
+    <div class="episode-listing" *ngFor="let episode of season2">
+        <h6> E:{{episode.episode.slice(4,6)}} </h6> <h4>{{episode.name}}</h4>
+        <img src="https://via.placeholder.com/200" class="center">
+        <button class='episode-button' routerLink="/episodes/{{episode.id}}">Visit Episode</button>
+        <button id="favorites" (click)="renderFavorites(episode.id)" onClick="this.disabled=true">Favorite!</button>
+    </div>
+</div>
+
+<!-- <div class="dark fire">
+    <h1 class="Blazing">Season Three</h1>
+</div> 
+
+<div class="episodes-container">
+    <div class="episode-listing" *ngFor="let episode of season3">
+        <h6> E:{{episode.episode.slice(4,6)}} </h6> <h4>{{episode.name}}</h4>
+        <img src="https://via.placeholder.com/200" class="center">
+        <button class='episode-button' routerLink="/episodes/{{episode.id}}">Visit Episode</button>
+        <button id="favorites" (click)="renderFavorites(episode.id)" onClick="this.disabled=true">Favorite!</button>
+    </div>
+</div> -->

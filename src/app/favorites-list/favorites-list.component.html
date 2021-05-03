@@ -1,0 +1,16 @@
+
+<div class="dark fire">
+        <h1 class="Blazing" >Favorites List</h1>
+</div>
+
+<div class="episodes-container">
+    <div *ngIf="!favorites || favorites.length === 0">
+        <h3>You have 0 Favorite episodes.</h3>
+    </div>
+    <div class="episode-listing" *ngFor="let episode of favorites">
+        <h6>{{episode.episode}}</h6> <h3> {{episode.name}} </h3>
+        <img src="https://via.placeholder.com/200" class="center">
+        <button class='episode-button' routerLink="/episodes/{{episode.id}}">Visit Episode</button>
+        <button  (click)="deleteFavorite(episode.id)" onClick="this.disabled=true">Remove Favorite</button>
+    </div>
+</div>

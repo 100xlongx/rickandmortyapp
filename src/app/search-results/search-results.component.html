@@ -1,0 +1,13 @@
+<h1> Search results for: {{searchTerm}}</h1>
+
+<div class="search-results-container">
+
+    <div class="episode-listing" *ngFor="let episode of results">
+        <h6>{{episode.episode}}</h6>
+        <h3> {{episode.name}} </h3>
+        <img src="https://via.placeholder.com/200" class="center">
+        <button class='episode-button' routerLink="/episodes/{{episode.id}}">Visit Episode</button>
+        <button id="favorites" (click)="renderFavorites(episode.id)" onClick="this.disabled=true">Favorite!</button>
+    </div>   
+
+</div>
